@@ -13,10 +13,13 @@ public function up()
 {
     Schema::create('authors', function (Blueprint $table) {
         $table->id();
-        $table->string('name');
+        $table->string('title');
+        $table->string('author');  // Pastikan ada kolom author
+        $table->integer('year');
         $table->timestamps();
     });
 }
+
 
 
     /**

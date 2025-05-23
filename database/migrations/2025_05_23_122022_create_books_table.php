@@ -14,10 +14,13 @@ public function up()
     Schema::create('books', function (Blueprint $table) {
         $table->id();
         $table->string('title');
-        $table->foreignId('author_id')->constrained()->onDelete('cascade');
+        $table->string('author');  // Pastikan ada kolom author
+        $table->integer('year');
         $table->timestamps();
     });
 }
+
+
 
     /**
      * Reverse the migrations.
